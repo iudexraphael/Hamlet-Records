@@ -1,0 +1,125 @@
+﻿@model BarangayMonitoringSystem.Models.Clearances
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Details</title>
+    <style>
+    h4
+    {
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    body {
+    background-color:#0f3569;
+    }
+    dt {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 20px;
+    font: bold;
+
+    }
+    dd {
+    font-family: 'Century Gothic', Geneva, Tahoma, sans-serif;
+    font-size: 18px;
+    margin: 8px;
+    border: 1px solid;
+    padding: 7px;
+    font: bold;
+    background-color: #e6e6e6;
+
+    }
+    .jumbotron
+    {
+    background-color:#3f9bff;
+    padding: 20px;
+    margin: 0 auto;
+    width: 800px;
+    border: 1px solid #c0c0c0;
+    }
+
+    a:link, a:visited {
+    background-color: #1c58aa;
+    color: white;
+    padding: 14px 25px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-family:'Century Gothic'
+    }
+
+
+    a:hover, a:active {
+    background-color: dimgrey;
+    }
+    </style>
+</head>
+<body>
+
+    <div class="jumbotron">
+        <h4>Clearances</h4>
+        <hr />
+        <p>
+            @Html.ActionLink("Edit", "Edit", new { id = Model.ClearanceId }) |
+            @Html.ActionLink("Back to List", "Index")
+        </p>
+        <dl class="dl-horizontal">
+            <dt>
+                @Html.DisplayNameFor(model => model.ResidentId)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.ResidentId)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.Residentname)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.Residentname)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.Cedula)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.Cedula)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.BarangayId)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.BarangayId)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.RegisteredVoter)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.RegisteredVoter)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.BGClearance)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.BGClearance)
+            </dd>
+
+        </dl>
+    </div>
+   
+</body>
+</html>

@@ -1,0 +1,141 @@
+﻿@model IEnumerable<BarangayMonitoringSystem.Models.Blotterreports>
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Index</title>
+
+   
+
+   <link rel="stylesheet" type="text/css" href="~/Content/indexcrud.css" />
+    
+</head>
+<body>
+    <div class="sidenav">
+        <ul>
+      <li>  @Html.ActionLink("Dashboard", "Index", "Home") </li>
+            <li> @Html.ActionLink("Resident Records", "Index", "ResidentRegisters") </li>
+            <li>  @Html.ActionLink("Resident Clearances", "Index", "Clearances") </li>
+            <li> @Html.ActionLink("Incident Reports", "Index", "Blotterreports", new { @Style = "background-color:green" })        </li>
+            <li>@Html.ActionLink("About", "About", "Home")</li>
+            <li> @Html.ActionLink("Logout", "Login1", "Login")</li>
+            
+</ul>
+    </div>
+   
+    <div style="margin-left:25%" id="jumbotron">
+      
+        @Html.ActionLink("Create New Incident Report", "Create")
+    </div>
+
+    @using (Html.BeginForm("Index", "Blotterreports", FormMethod.Get))
+    {
+        <div style="margin-left:25% " id="searchfunction">
+            <p class="searchfunction">
+                <b> Search Incident:</b> @Html.TextBox("SearchString")
+                <input type="submit" value="Search" class="inputbuttonclass" />
+
+                @Html.ActionLink("Reset", "Index")
+            </p>
+        </div>
+    }
+
+    <center>
+        <table class="table" id="residents"  style="margin-left:25% ">
+            <tr>
+                <th>
+                    @Html.DisplayNameFor(model => model.Blotternumber)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Id)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.ResidentFirstName)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.ResidentMiddleName)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.ResidentLastName)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Incidentlocation)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Incidenttype)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Status)
+                </th>
+
+                <th>
+                    @Html.DisplayNameFor(model => model.Datereported)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.DateIncident)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Remarks)
+                </th>
+                <th></th>
+            </tr>
+
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Blotternumber)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Id)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.ResidentFirstName)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.ResidentMiddleName)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.ResidentLastName)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Incidentlocation)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Incidenttype)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Status)
+                    </td>
+
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Datereported)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.DateIncident)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Remarks)
+                    </td>
+                    <td>
+                        <div id="crudbuttons">
+                            @Html.ActionLink("Edit", "Edit", new { id = item.Blotternumber }, new { @Style= "background-color:blue" })
+                            @Html.ActionLink("Details", "Details", new { id = item.Blotternumber }, new { @Style = "background-color:green" })
+                            @Html.ActionLink("Delete", "Delete", new { id = item.Blotternumber }, new { @Style = "background-color:red" })
+                        </div>
+                    </td>
+                </tr>
+            }
+            
+        </table>
+        </center>
+
+   
+</body>
+</html>

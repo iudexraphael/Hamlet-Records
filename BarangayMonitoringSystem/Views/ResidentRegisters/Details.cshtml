@@ -1,0 +1,189 @@
+﻿@model BarangayMonitoringSystem.Models.ResidentRegister
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Details</title>
+
+    <style>
+        h4 
+        {
+            font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+           background-color:#0f3569;
+        }
+        dt {
+             font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 20px;
+    font: bold;
+
+        }
+        dd {
+             font-family: 'Century Gothic', Geneva, Tahoma, sans-serif;
+    font-size: 18px;
+    margin: 8px;
+    border: 1px solid;
+    padding: 7px;
+    font: bold;
+    background-color: #e6e6e6;
+    
+        }
+           .jumbotron 
+{
+    background-color:#3f9bff;
+         padding: 20px;
+            margin: 0 auto;
+            width: 800px;
+        border: 1px solid #c0c0c0;
+       }
+
+            a:link, a:visited {
+  background-color: #1c58aa;
+  color: white;
+  padding: 14px 25px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-family:'Century Gothic'
+}
+
+
+a:hover, a:active {
+  background-color: dimgrey;
+}
+    
+    </style>
+</head>
+<body>
+    <div class="jumbotron">
+        <center> <h4>Resident Information</h4> </center>
+        <hr />
+
+        <p>
+            @Html.ActionLink("Edit", "Edit", new { id = Model.ID })
+            @Html.ActionLink("Back to List", "Index")
+        </p>
+        <dl class="dl-horizontal">
+            <dt>
+                @Html.DisplayNameFor(model => model.ID)
+            </dt>
+            <dd>
+                @Html.DisplayFor(model => model.ID)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.ResidentFirstName)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.ResidentFirstName)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.ResidentMiddleName)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.ResidentMiddleName)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.ResidentLastName)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.ResidentLastName)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.Age)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.Age)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.Gender)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.Gender)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.Address)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.Address)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.Religion)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.Religion)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.Status)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.Status)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.Occupation)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.Occupation)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.Nationality)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.Nationality)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.Birthdate)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.Birthdate)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.PlaceofBirth)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.PlaceofBirth)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.Contactnumber)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.Contactnumber)
+            </dd>
+        </dl>
+    </div>
+   
+</body>
+</html>

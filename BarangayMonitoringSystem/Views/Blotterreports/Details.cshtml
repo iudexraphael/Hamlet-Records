@@ -1,0 +1,164 @@
+﻿@model BarangayMonitoringSystem.Models.Blotterreports
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Details</title>
+
+    <style>
+        h4 {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background-color: #0f3569;
+        }
+
+        dt {
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            font-size: 20px;
+            font: bold;
+        }
+
+        dd {
+            font-family: 'Century Gothic', Geneva, Tahoma, sans-serif;
+            font-size: 18px;
+            margin: 8px;
+            border: 1px solid;
+            padding: 7px;
+            font: bold;
+            background-color: #e6e6e6;
+        }
+
+        .jumbotron {
+            background-color: #3f9bff;
+            padding: 20px;
+            margin: 0 auto;
+            width: 800px;
+            border: 1px solid #c0c0c0;
+        }
+
+        a:link, a:visited {
+            background-color: #1c58aa;
+            color: white;
+            padding: 14px 25px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-family: 'Century Gothic';
+        }
+
+
+  a:hover, a:active {
+  background-color: dimgrey;
+}
+    </style>
+</head>
+<body>
+    <div class="jumbotron">
+        <h4>Incident Reports</h4>
+        <hr />
+        <dl class="dl-horizontal">
+            <p>
+                @Html.ActionLink("Back to List", "Index")
+                @Html.ActionLink("Edit", "Edit", new { id = Model.Blotternumber }) |
+               
+            </p>
+            <dt>
+                @Html.DisplayNameFor(model => model.Blotternumber)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.Blotternumber)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.Id)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.Id)
+            </dd>
+            <dt>
+                @Html.DisplayNameFor(model => model.ResidentFirstName)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.ResidentFirstName)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.ResidentMiddleName)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.ResidentMiddleName)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.ResidentLastName)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.ResidentLastName)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.Incidentlocation)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.Incidentlocation)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.Incidenttype)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.Incidenttype)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.Status)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.Status)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.Remarks)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.Remarks)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.Datereported)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.Datereported)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.DateIncident)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.DateIncident)
+            </dd>
+    
+        </dl>
+    </div>
+   
+</body>
+</html>
